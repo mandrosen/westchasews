@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:cmu" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:cmu">
+<types>
+<xsd:schema targetNamespace="urn:cmu"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+ <xsd:complexType name="IntArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="xsd:int[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="CmuApartment">
+  <xsd:all>
+   <xsd:element name="id" type="xsd:long"/>
+   <xsd:element name="quarter" type="xsd:int"/>
+   <xsd:element name="property" type="xsd:int"/>
+   <xsd:element name="completed_by" type="xsd:string"/>
+   <xsd:element name="occupancy_rate" type="xsd:float"/>
+   <xsd:element name="community_mgr" type="xsd:string"/>
+   <xsd:element name="community_mgr_email" type="xsd:string"/>
+   <xsd:element name="community_mgr_phone" type="xsd:string"/>
+   <xsd:element name="community_mgr_fax" type="xsd:string"/>
+   <xsd:element name="mgmt_company" type="xsd:string"/>
+   <xsd:element name="mgmt_company_addr" type="xsd:string"/>
+   <xsd:element name="supervisor" type="xsd:string"/>
+   <xsd:element name="supervisor_email" type="xsd:string"/>
+   <xsd:element name="supervisor_phone" type="xsd:string"/>
+   <xsd:element name="supervisor_fax" type="xsd:string"/>
+   <xsd:element name="owner" type="xsd:string"/>
+   <xsd:element name="owner_address" type="xsd:string"/>
+   <xsd:element name="owner_phone" type="xsd:string"/>
+   <xsd:element name="owner_fax" type="xsd:string"/>
+   <xsd:element name="comments" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="CmuApartmentArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:CmuApartment[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="CmuDevsite">
+  <xsd:all>
+   <xsd:element name="id" type="xsd:long"/>
+   <xsd:element name="quarter" type="xsd:int"/>
+   <xsd:element name="property" type="xsd:int"/>
+   <xsd:element name="completed_by" type="xsd:string"/>
+   <xsd:element name="site_size" type="xsd:float"/>
+   <xsd:element name="frontage" type="xsd:string"/>
+   <xsd:element name="contact" type="xsd:string"/>
+   <xsd:element name="company" type="xsd:string"/>
+   <xsd:element name="phone" type="xsd:string"/>
+   <xsd:element name="fax" type="xsd:string"/>
+   <xsd:element name="email" type="xsd:string"/>
+   <xsd:element name="divide" type="xsd:int"/>
+   <xsd:element name="price_sq_ft" type="xsd:string"/>
+   <xsd:element name="restrictions" type="xsd:string"/>
+   <xsd:element name="comments" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="CmuDevsiteArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:CmuDevsite[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="CmuHotel">
+  <xsd:all>
+   <xsd:element name="id" type="xsd:long"/>
+   <xsd:element name="quarter" type="xsd:int"/>
+   <xsd:element name="property" type="xsd:int"/>
+   <xsd:element name="completed_by" type="xsd:string"/>
+   <xsd:element name="general_mgr" type="xsd:string"/>
+   <xsd:element name="general_mgr_email" type="xsd:string"/>
+   <xsd:element name="general_mgr_phone" type="xsd:string"/>
+   <xsd:element name="occupancy" type="xsd:float"/>
+   <xsd:element name="comments" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="CmuHotelArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:CmuHotel[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="CmuLease">
+  <xsd:all>
+   <xsd:element name="id" type="xsd:long"/>
+   <xsd:element name="quarter" type="xsd:int"/>
+   <xsd:element name="property" type="xsd:int"/>
+   <xsd:element name="tenant_name" type="xsd:string"/>
+   <xsd:element name="sq_ft" type="xsd:float"/>
+   <xsd:element name="lease_trans_type" type="xsd:int"/>
+   <xsd:element name="owners_rep" type="xsd:string"/>
+   <xsd:element name="tenants_rep" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="CmuLeaseArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:CmuLease[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="CmuOfficeRetailSvc">
+  <xsd:all>
+   <xsd:element name="id" type="xsd:long"/>
+   <xsd:element name="quarter" type="xsd:int"/>
+   <xsd:element name="property" type="xsd:int"/>
+   <xsd:element name="completed_by" type="xsd:string"/>
+   <xsd:element name="for_sale" type="xsd:int"/>
+   <xsd:element name="for_sale_contact" type="xsd:string"/>
+   <xsd:element name="for_sale_phone" type="xsd:string"/>
+   <xsd:element name="sq_ft_for_lease" type="xsd:float"/>
+   <xsd:element name="occupancy" type="xsd:float"/>
+   <xsd:element name="largest_space" type="xsd:float"/>
+   <xsd:element name="largest_space_6mths" type="xsd:float"/>
+   <xsd:element name="largest_space_12mths" type="xsd:float"/>
+   <xsd:element name="property_mgr" type="xsd:string"/>
+   <xsd:element name="property_mgr_phone" type="xsd:string"/>
+   <xsd:element name="property_mgr_fax" type="xsd:string"/>
+   <xsd:element name="property_mgr_email" type="xsd:string"/>
+   <xsd:element name="mgmt_company" type="xsd:string"/>
+   <xsd:element name="mgmt_company_addr" type="xsd:string"/>
+   <xsd:element name="leasing_company" type="xsd:string"/>
+   <xsd:element name="leasing_company_addr" type="xsd:string"/>
+   <xsd:element name="leasing_agent" type="xsd:string"/>
+   <xsd:element name="leasing_agent_phone" type="xsd:string"/>
+   <xsd:element name="leasing_agent_fax" type="xsd:string"/>
+   <xsd:element name="leasing_agent_email" type="xsd:string"/>
+   <xsd:element name="comments" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="CmuOfficeRetailSvcArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:CmuOfficeRetailSvc[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+</xsd:schema>
+</types>
+<message name="getNewApartmentsRequest"></message>
+<message name="getNewApartmentsResponse">
+  <part name="return" type="tns:CmuApartmentArray" /></message>
+<message name="getNewDevsitesRequest"></message>
+<message name="getNewDevsitesResponse">
+  <part name="return" type="tns:CmuDevsiteArray" /></message>
+<message name="getNewHotelsRequest"></message>
+<message name="getNewHotelsResponse">
+  <part name="return" type="tns:CmuHotelArray" /></message>
+<message name="getNewLeasesRequest"></message>
+<message name="getNewLeasesResponse">
+  <part name="return" type="tns:CmuLeaseArray" /></message>
+<message name="getNewOfficeRetailSvcsRequest"></message>
+<message name="getNewOfficeRetailSvcsResponse">
+  <part name="return" type="tns:CmuOfficeRetailSvcArray" /></message>
+<message name="setTransferredRequest">
+  <part name="table" type="xsd:string" />
+  <part name="ids" type="tns:IntArray" /></message>
+<message name="setTransferredResponse"></message>
+<portType name="CMUPortType">
+  <operation name="getNewApartments">
+    <documentation>returns new cmu apartments</documentation>
+    <input message="tns:getNewApartmentsRequest"/>
+    <output message="tns:getNewApartmentsResponse"/>
+  </operation>
+  <operation name="getNewDevsites">
+    <documentation>returns new cmu devsites</documentation>
+    <input message="tns:getNewDevsitesRequest"/>
+    <output message="tns:getNewDevsitesResponse"/>
+  </operation>
+  <operation name="getNewHotels">
+    <documentation>returns new cmu hotels</documentation>
+    <input message="tns:getNewHotelsRequest"/>
+    <output message="tns:getNewHotelsResponse"/>
+  </operation>
+  <operation name="getNewLeases">
+    <documentation>returns new cmu leases</documentation>
+    <input message="tns:getNewLeasesRequest"/>
+    <output message="tns:getNewLeasesResponse"/>
+  </operation>
+  <operation name="getNewOfficeRetailSvcs">
+    <documentation>returns new cmu office retail svcs</documentation>
+    <input message="tns:getNewOfficeRetailSvcsRequest"/>
+    <output message="tns:getNewOfficeRetailSvcsResponse"/>
+  </operation>
+  <operation name="setTransferred">
+    <documentation>runs the specified query</documentation>
+    <input message="tns:setTransferredRequest"/>
+    <output message="tns:setTransferredResponse"/>
+  </operation>
+</portType>
+<binding name="CMUBinding" type="tns:CMUPortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="getNewApartments">
+    <soap:operation soapAction="urn:cmu#getNewApartments" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="getNewDevsites">
+    <soap:operation soapAction="urn:cmu#getNewDevsites" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="getNewHotels">
+    <soap:operation soapAction="urn:cmu#getNewHotels" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="getNewLeases">
+    <soap:operation soapAction="urn:cmu#getNewLeases" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="getNewOfficeRetailSvcs">
+    <soap:operation soapAction="urn:cmu#getNewOfficeRetailSvcs" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="setTransferred">
+    <soap:operation soapAction="urn:cmu#runQuery" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:cmu" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="CMU">
+  <port name="CMUPort" binding="tns:CMUBinding">
+    <soap:address location="http://www.westchasedistrict.com/app/cmu/ws/cmu.php"/>
+  </port>
+</service>
+</definitions>

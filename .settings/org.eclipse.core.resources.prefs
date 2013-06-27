@@ -1,0 +1,11 @@
+#Tue Sep 07 20:41:45 CDT 2010
+eclipse.preferences.version=1
+encoding//src/com/westchase/ws/cmu/CMU.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CMUBindingStub.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CMULocator.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CMUPortType.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CmuApartment.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CmuDevsite.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CmuHotel.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CmuLease.java=UTF-8
+encoding//src/com/westchase/ws/cmu/CmuOfficeRetailSvc.java=UTF-8
