@@ -60,6 +60,8 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
 
     private java.lang.String comments;
 
+    private boolean static_info_correct;
+
     public CmuOfficeRetailSvc() {
     }
 
@@ -89,7 +91,8 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
            java.lang.String leasing_agent_phone,
            java.lang.String leasing_agent_fax,
            java.lang.String leasing_agent_email,
-           java.lang.String comments) {
+           java.lang.String comments,
+           boolean static_info_correct) {
            this.id = id;
            this.quarter = quarter;
            this.property = property;
@@ -116,6 +119,7 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
            this.leasing_agent_fax = leasing_agent_fax;
            this.leasing_agent_email = leasing_agent_email;
            this.comments = comments;
+           this.static_info_correct = static_info_correct;
     }
 
 
@@ -638,6 +642,26 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
         this.comments = comments;
     }
 
+
+    /**
+     * Gets the static_info_correct value for this CmuOfficeRetailSvc.
+     * 
+     * @return static_info_correct
+     */
+    public boolean isStatic_info_correct() {
+        return static_info_correct;
+    }
+
+
+    /**
+     * Sets the static_info_correct value for this CmuOfficeRetailSvc.
+     * 
+     * @param static_info_correct
+     */
+    public void setStatic_info_correct(boolean static_info_correct) {
+        this.static_info_correct = static_info_correct;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof CmuOfficeRetailSvc)) return false;
@@ -665,6 +689,7 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
               this.for_sale_phone.equals(other.getFor_sale_phone()))) &&
             this.sq_ft_for_lease == other.getSq_ft_for_lease() &&
             this.occupancy == other.getOccupancy() &&
+            this.occupied == other.getOccupied() &&
             this.largest_space == other.getLargest_space() &&
             this.largest_space_6Mths == other.getLargest_space_6Mths() &&
             this.largest_space_12Mths == other.getLargest_space_12Mths() &&
@@ -706,7 +731,8 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
               this.leasing_agent_email.equals(other.getLeasing_agent_email()))) &&
             ((this.comments==null && other.getComments()==null) || 
              (this.comments!=null &&
-              this.comments.equals(other.getComments())));
+              this.comments.equals(other.getComments()))) &&
+            this.static_info_correct == other.isStatic_info_correct();
         __equalsCalc = null;
         return _equals;
     }
@@ -733,6 +759,7 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
         }
         _hashCode += new Float(getSq_ft_for_lease()).hashCode();
         _hashCode += new Float(getOccupancy()).hashCode();
+        _hashCode += new Float(getOccupied()).hashCode();
         _hashCode += new Float(getLargest_space()).hashCode();
         _hashCode += new Float(getLargest_space_6Mths()).hashCode();
         _hashCode += new Float(getLargest_space_12Mths()).hashCode();
@@ -775,6 +802,7 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
         if (getComments() != null) {
             _hashCode += getComments().hashCode();
         }
+        _hashCode += (isStatic_info_correct() ? Boolean.TRUE : Boolean.FALSE).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -836,6 +864,12 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("occupancy");
         elemField.setXmlName(new javax.xml.namespace.QName("", "occupancy"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("occupied");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "occupied"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
@@ -933,6 +967,12 @@ public class CmuOfficeRetailSvc  implements java.io.Serializable {
         elemField.setFieldName("comments");
         elemField.setXmlName(new javax.xml.namespace.QName("", "comments"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("static_info_correct");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "static_info_correct"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

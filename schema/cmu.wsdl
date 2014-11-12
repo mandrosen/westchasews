@@ -34,6 +34,7 @@
    <xsd:element name="owner_phone" type="xsd:string"/>
    <xsd:element name="owner_fax" type="xsd:string"/>
    <xsd:element name="comments" type="xsd:string"/>
+   <xsd:element name="static_info_correct" type="xsd:boolean"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="CmuApartmentArray">
@@ -60,6 +61,7 @@
    <xsd:element name="price_sq_ft" type="xsd:string"/>
    <xsd:element name="restrictions" type="xsd:string"/>
    <xsd:element name="comments" type="xsd:string"/>
+   <xsd:element name="static_info_correct" type="xsd:boolean"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="CmuDevsiteArray">
@@ -80,6 +82,7 @@
    <xsd:element name="general_mgr_phone" type="xsd:string"/>
    <xsd:element name="occupancy" type="xsd:float"/>
    <xsd:element name="comments" type="xsd:string"/>
+   <xsd:element name="static_info_correct" type="xsd:boolean"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="CmuHotelArray">
@@ -119,6 +122,7 @@
    <xsd:element name="for_sale_phone" type="xsd:string"/>
    <xsd:element name="sq_ft_for_lease" type="xsd:float"/>
    <xsd:element name="occupancy" type="xsd:float"/>
+   <xsd:element name="occupied" type="xsd:float"/>
    <xsd:element name="largest_space" type="xsd:float"/>
    <xsd:element name="largest_space_6mths" type="xsd:float"/>
    <xsd:element name="largest_space_12mths" type="xsd:float"/>
@@ -135,6 +139,7 @@
    <xsd:element name="leasing_agent_fax" type="xsd:string"/>
    <xsd:element name="leasing_agent_email" type="xsd:string"/>
    <xsd:element name="comments" type="xsd:string"/>
+   <xsd:element name="static_info_correct" type="xsd:boolean"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="CmuOfficeRetailSvcArray">
