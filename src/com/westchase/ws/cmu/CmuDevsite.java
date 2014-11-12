@@ -38,6 +38,8 @@ public class CmuDevsite  implements java.io.Serializable {
 
     private java.lang.String comments;
 
+    private boolean static_info_correct;
+
     public CmuDevsite() {
     }
 
@@ -56,7 +58,8 @@ public class CmuDevsite  implements java.io.Serializable {
            int divide,
            java.lang.String price_sq_ft,
            java.lang.String restrictions,
-           java.lang.String comments) {
+           java.lang.String comments,
+           boolean static_info_correct) {
            this.id = id;
            this.quarter = quarter;
            this.property = property;
@@ -72,6 +75,7 @@ public class CmuDevsite  implements java.io.Serializable {
            this.price_sq_ft = price_sq_ft;
            this.restrictions = restrictions;
            this.comments = comments;
+           this.static_info_correct = static_info_correct;
     }
 
 
@@ -374,6 +378,26 @@ public class CmuDevsite  implements java.io.Serializable {
         this.comments = comments;
     }
 
+
+    /**
+     * Gets the static_info_correct value for this CmuDevsite.
+     * 
+     * @return static_info_correct
+     */
+    public boolean isStatic_info_correct() {
+        return static_info_correct;
+    }
+
+
+    /**
+     * Sets the static_info_correct value for this CmuDevsite.
+     * 
+     * @param static_info_correct
+     */
+    public void setStatic_info_correct(boolean static_info_correct) {
+        this.static_info_correct = static_info_correct;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof CmuDevsite)) return false;
@@ -420,7 +444,8 @@ public class CmuDevsite  implements java.io.Serializable {
               this.restrictions.equals(other.getRestrictions()))) &&
             ((this.comments==null && other.getComments()==null) || 
              (this.comments!=null &&
-              this.comments.equals(other.getComments())));
+              this.comments.equals(other.getComments()))) &&
+            this.static_info_correct == other.isStatic_info_correct();
         __equalsCalc = null;
         return _equals;
     }
@@ -467,6 +492,7 @@ public class CmuDevsite  implements java.io.Serializable {
         if (getComments() != null) {
             _hashCode += getComments().hashCode();
         }
+        _hashCode += (isStatic_info_correct() ? Boolean.TRUE : Boolean.FALSE).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -565,6 +591,12 @@ public class CmuDevsite  implements java.io.Serializable {
         elemField.setFieldName("comments");
         elemField.setXmlName(new javax.xml.namespace.QName("", "comments"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("static_info_correct");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "static_info_correct"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

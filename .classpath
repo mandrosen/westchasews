@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="C:/eclipse/eclipse-jee-helios-RC3-win32/eclipse/plugins/javax.xml.soap_1.2.0.v201005080501/lib/saaj.jar"/>
 	<classpathentry kind="lib" path="C:/eclipse/eclipse-jee-helios-RC3-win32/eclipse/plugins/javax.wsdl_1.6.2.v201005080631.jar"/>
 	<classpathentry kind="lib" path="C:/eclipse/eclipse-jee-helios-RC3-win32/eclipse/plugins/org.apache.commons.logging_1.0.4.v201005080501.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/eclipse-jee-juno-win32-x86_64/eclipse/plugins/javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/eclipse-jee-juno-win32-x86_64/eclipse/plugins/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
