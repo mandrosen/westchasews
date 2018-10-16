@@ -237,7 +237,7 @@
 </binding>
 <service name="CMU">
   <port name="CMUPort" binding="tns:CMUBinding">
-    <soap:address location="http://www.westchasedistrict.com/app/cmu/ws/cmu.php"/>
+    <soap:address location="https://www.westchasedistrict.com/app/cmu/ws/cmu.php"/>
   </port>
 </service>
 </definitions>

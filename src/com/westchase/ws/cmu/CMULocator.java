@@ -22,7 +22,7 @@ public class CMULocator extends org.apache.axis.client.Service implements com.we
     }
 
     // Use to get a proxy class for CMUPort
-    private java.lang.String CMUPort_address = "http://www.westchasedistrict.com/app/cmu/ws/cmu.php";
+    private java.lang.String CMUPort_address = "https://www.westchasedistrict.com/app/cmu/ws/cmu.php";
 
     public java.lang.String getCMUPortAddress() {
         return CMUPort_address;
